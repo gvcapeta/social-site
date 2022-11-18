@@ -1,0 +1,11 @@
+<input type="file"  accept="image/*" name="header" id="file"  onchange="loadFile(event)" style="display: none;">
+<label for="file" style="cursor: pointer;"><img title="change header" for="file" name="header" src="header.jpg" width="670px"></label>
+<img id="output" width="670px">
+
+<script>
+var loadFile = function(event) 
+{
+	var header = document.getElementById('output');
+	header.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
